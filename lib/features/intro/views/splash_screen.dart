@@ -1,8 +1,23 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruits_app/features/intro/views/onboarding.dart';
+import 'package:fruits_app/features/intro/widgets/navigation_function.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
-
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+class _SplashScreenState extends State<SplashScreen> {
+@override
+void initState(){
+  super.initState();
+  Future.delayed(Duration(seconds:2),(){ if (mounted){ Navigator.of(context).pushReplacement(
+    MaterialPageRoute(builder: (_) => Onboarding()),
+  );}});
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,13 +30,11 @@ class SplashScreen extends StatelessWidget {
           ),
           Column(
             children: [
-              const SizedBox(height: 16),
-
+              SizedBox(height: 16.h),
               Expanded(
                 flex: 3,
                 child: Center(child: Image.asset('assets/images/logo.png')),
               ),
-
               Expanded(
                 flex: 2,
                 child: Align(
