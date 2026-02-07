@@ -79,7 +79,7 @@ class _OnboardingState extends State<Onboarding> {
               ),
             ),
             //SizedBox(height:48.h ,),
-            MySmoothPageIndicator(pageController: pageController, count: 3),
+            MySmoothPageIndicator(pageController: pageController, count: 3,size:12),
             SizedBox(height: 84.h),
             SizedBox(
               width: 177.w,

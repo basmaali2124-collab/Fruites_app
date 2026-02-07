@@ -11,6 +11,8 @@ ThemeData appTheme() {
                   focusedBorder:  OutlineInputBorder(
                    borderRadius: BorderRadius.all(Radius.circular(32)),
           ),),
+          cardTheme: CardThemeData(color: Colors.white,elevation: 4, // قوة الظل
+   ),
           textTheme: TextTheme(),
           colorScheme: .fromSeed(seedColor: Color(0xFF204F38)),
         );
